@@ -4,7 +4,7 @@
     <!-- Search -->
     <section id="search" class="alt">
       <form method="post" action="#">
-        <input type="text" name="query" id="query" placeholder="Search" />
+        <input type="text" name="query" id="query" placeholder="Search" [(ngModel)]="texte" (change)="onChange()">
       </form>
     </section>
 
@@ -18,16 +18,20 @@
       </header>
       <div class="mini-posts">
         <article>
-          <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-          <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+          <a [href]="href" class="image"><img [src]="image" [alt]="alt" /></a>
+          <p>{{paragraphe}}</p>
         </article>
         <article>
-          <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-          <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+          <a [href]="href2" class="image"><img [src]="image2" [alt]="alt2" /></a>
+          <p>{{paragraphe2}}</p>
+        </article>
+        <article>
+          <a [href]="minipost1.lien" class="image"><img [src]="'assets/images/' + minipost1.image" [alt]="minipost1.alt" /></a>
+          <p>{{minipost1.paragraphe}}</p>
         </article>
       </div>
       <ul class="actions">
-        <li><a href="#" class="button">More</a></li>
+        <li><a class="button" (click)="onClick()">More</a></li>
       </ul>
     </section>
 
