@@ -1,0 +1,22 @@
+<p>formulaire works!</p>
+<form (submit)="onSubmit(form)" #form>
+  <label > Titre (*) :
+    <input [class.invalid]="!titre.checkValidity()"   type="text" name="titre" [(ngModel)]="post.titre" required #titre>
+    <p *ngIf="!titre.checkValidity()">Le titre est requis</p>
+  </label>
+  <label> Lien :
+    <input [class.invalid]="!link.checkValidity()" type="text" name="postLink" [(ngModel)]="post.postLink" required #link>
+    <p *ngIf="!link.checkValidity()">Le lien est requis</p>
+  </label>
+  <label> Source Image :
+    <input type="text" name="imageSrc" [(ngModel)]="post.imageSrc">
+  </label>
+  <label> Description Alternative :
+    <input type="text" name="imageAlt" [(ngModel)]="post.imageAlt">
+  </label>
+  <label> Description Post :
+    <input [class.invalid]="!description.checkValidity()" type="text" name="description" [(ngModel)]="post.description" required #description>
+    <p *ngIf="!description.checkValidity()">La description est requise</p>
+  </label>
+  <input [disabled]="!form.checkValidity()" type="submit" value="Enregistrer">
+</form>
