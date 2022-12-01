@@ -1,0 +1,11 @@
+<hr>
+FormControl <span style="color: red">(*)</span> :
+<label>Titre
+  <input [class.invalid]="formControlTitre.invalid
+  && formControlTitre.touched" type="text"
+         name="titre" [formControl]="formControlTitre">
+  <p *ngIf="formControlTitre.invalid
+  && formControlTitre.touched">FormControl invalide</p>
+</label>
+<p> Titre : {{formControlTitre.value}}</p>
+<p> Contrôle valide : {{formControlTitre.valid && formControlTitre.touched}}</p>

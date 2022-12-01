@@ -9,8 +9,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SousMenuComponent } from './components/menu/sous-menu/sous-menu.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
+import { FormControlComponent } from './components/form-control/form-control.component';
+import { FormGroupComponent } from './components/form-group/form-group.component';
+import { EditorComponent } from './pages/editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,15 @@ import { FormulaireComponent } from './components/formulaire/formulaire.componen
     SousMenuComponent,
     SidebarComponent,
     HomeComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    FormControlComponent,
+    FormGroupComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

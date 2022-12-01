@@ -1,0 +1,26 @@
+
+
+<form [formGroup]="formGroup" (submit)="onSubmit()">
+  <label>Titre :
+    <input [class.invalid]="formGroup.controls['titre'].invalid" type="text" name="titre"
+           formControlName="titre">
+  </label>
+  <label>Lien :
+    <input [class.invalid]="formGroup.controls['postLink'].invalid" type="text" name="postLink"
+        formControlName="postLink">
+  </label>
+  <label>Source Image :
+    <input type="text" name="imageSrc"
+           formControlName="imageSrc">
+  </label>
+  <label>Description Alternative :
+    <input type="text" name="imageAlt"
+           formControlName="imageAlt">
+  </label>
+  <label>Description du Post:
+    <input [class.invalid]="formGroup.controls['description'].invalid" type="text" name="description"
+           formControlName="description">
+  </label>
+  <input [disabled]="formGroup.invalid"  type="submit" value="Enregistrer">
+</form>
+<p>Value : {{formGroup.value}}</p>
