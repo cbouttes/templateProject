@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { FormControlComponent } from './components/form-control/form-control.component';
 import { FormGroupComponent } from './components/form-group/form-group.component';
+import { EditorComponent } from './pages/editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormGroupComponent } from './components/form-group/form-group.component
     HomeComponent,
     FormulaireComponent,
     FormControlComponent,
-    FormGroupComponent
+    FormGroupComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
