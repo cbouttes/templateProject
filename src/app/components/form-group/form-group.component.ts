@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators} from "@angular/forms";
+import {ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -19,9 +20,16 @@ export class FormGroupComponent implements OnInit {
     postLink: new FormControl('', [Validators.required, this.isBlankValidator()])
   })
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // Récupère la valeur en cours de la variable titre présente dans l'URL
+    const titreActuel = this.route.snapshot.paramMap.get('titre')
+    // Il est possible de récupérer des informations avec this.route.snapshot.queryParamMap
+    if(titreActuel) { // Si j'ai bien récupéré une valeur
+      // Je met a jour la valeur du formControl 'titre'
+      this.formGroup.controls['titre'].setValue(titreActuel)
+    }
   }
 
   onSubmit() {

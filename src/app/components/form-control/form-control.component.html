@@ -9,3 +9,5 @@ FormControl <span style="color: red">(*)</span> :
 </label>
 <p> Titre : {{formControlTitre.value}}</p>
 <p> Contrôle valide : {{formControlTitre.valid && formControlTitre.touched}}</p>
+<button [routerLink]="'/editor/reactive-form/'+formControlTitre.value"
+[disabled]="formControlTitre.pristine || formControlTitre.invalid" >Reactive Form</button>
