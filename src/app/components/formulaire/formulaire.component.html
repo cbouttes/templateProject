@@ -1,0 +1,25 @@
+
+
+
+<form (submit)="onSubmit(form)" #form>
+  <label> Titre <span style="color: red">(*)</span> :
+    <input [class.invalid]="!titre.checkValidity()" type="text"
+           name="titre" [(ngModel)]="post.titre" required #titre>
+    <p *ngIf="!titre.checkValidity()">Le titre est requis</p>
+  </label>
+  <label> Lien  <span style="color: red">(*)</span> :
+    <input [class.invalid]="!link.checkValidity()"type="text"
+           name="postLink"  [(ngModel)]="post.postLink" required #link>
+  </label>
+  <label> Source Image :
+    <input type="text" name="imageSrc" [(ngModel)]="post.imageSrc">
+  </label>
+  <label> Description Alternative :
+    <input type="text" name="imageAlt" [(ngModel)]="post.imageAlt">
+  </label>
+  <label> Description du Post <span style="color: red">(*)</span> :
+    <input [class.invalid]="!description.checkValidity()" type="text"
+           name="description" [(ngModel)]="post.description" required #description>
+  </label>
+  <input [disabled]="!form.checkValidity()" type="submit" value="Enregistrer">
+</form>
