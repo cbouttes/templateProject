@@ -10,6 +10,7 @@ import { SousMenuComponent } from './components/menu/sous-menu/sous-menu.compone
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
 import {FormsModule} from "@angular/forms";
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {FormsModule} from "@angular/forms";
     MenuComponent,
     SousMenuComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
