@@ -67,13 +67,16 @@ export class FormulaireComponent implements OnInit {
         error: err => console.log(err)
       })
 
-      // const s = (
-      //   //A l'intérieur de ces par
-      //
-      // ).subscribe({
-      //   next: value => alert('Article id :'+value),
-      //   error: err => console.log(err)
-      // })
+      /* const s = (
+         // A l'intérieur de ces parenthèses, je récupère l'observable correspondant à la situation (Create / Update)
+         (this.post.id === 0)
+        ? this.service.create(this.post)
+        : this.service.update(this.post).pipe(map(post => post.id || 0))
+       ) // Une fois le bon observable récupéré, j'y souscrit
+         .subscribe({
+        next: value => alert('Article id :' + value),
+        error: err => console.log(err)
+      }) */
 
     }
   }
