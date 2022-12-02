@@ -17,9 +17,20 @@ export class PostHttpComponent implements OnInit {
   ngOnInit(): void {
     //La requête ves le serveur n'est lancée qu'à partir du moment ou on souscrit à l'observable
     this.service.all().subscribe({
-      next: postServer => { this.posts = postServer },
+      next: postResponse => { this.posts = postResponse },
       error: (err) => console.log(err) // On s'assure de toujours avoir une trace en cas d'erreur
     })
+  }
+
+  deletePost(id?: number) { //Paramètre optionnel : id? (Le ? indique la possibilité du 'undefined')
+    if(id) {
+      this.service.delete(id).subscribe({
+        next: () => {
+          alert("Article Supprimé");
+          this.ngOnInit()
+        }
+      })
+    }
   }
 
 }

@@ -13,7 +13,8 @@ const routes: Routes = [
       {path: '', component: FormulaireComponent},
       {path: 'form-control', component: FormControlComponent},
       {path: 'reactive-form', component: FormGroupComponent},
-      {path: 'reactive-form/:titre', component: FormGroupComponent}
+      {path: 'reactive-form/:titre', component: FormGroupComponent},
+      {path: ':id', component: FormulaireComponent}
     ]},
   {path: 'json-server', component: PostHttpComponent},
   {path: '**', component: HomeComponent} // Toujours en dernier (404)

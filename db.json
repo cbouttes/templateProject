@@ -7,11 +7,19 @@
     },
     {
       "id": 2,
-      "description": "Ma description du Post",
+      "description": "Ma description du Post modidiée",
       "imageAlt": "",
       "imageSrc": "pic01.jpg",
       "postLink": "Mon lien image",
       "titre": "Mon nouveau POST"
+    },
+    {
+      "id": 3,
+      "description": "Description",
+      "imageAlt": "",
+      "imageSrc": "pic02.jpg",
+      "postLink": "Lien",
+      "titre": "Mon nouveau POST 2"
     }
   ],
   "comments": [

@@ -11,7 +11,9 @@
         <h3>{{post.titre}}</h3>
         <p>{{post.description}}</p>
         <ul class="actions">
-          <li><a href="#" class="button">More</a></li>
+          <!--<li><a href="#" class="button">More</a></li>-->
+          <li><a [routerLink]="'/editor/' + post.id" class="button">Editer</a></li>
+          <li><a (click)="deletePost(post.id)" class="button primary">Supprimer</a></li>
         </ul>
       </article>
     </ng-container>
