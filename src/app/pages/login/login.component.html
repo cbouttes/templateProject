@@ -1,0 +1,12 @@
+<p>login works!</p>
+<form (submit)="onSubmit(form)" #form>
+  <label> Nom d'utilisateur <span style="color: red">(*)</span> :
+    <input type="text"
+           name="username" [(ngModel)]="username" required>
+  </label>
+  <label> Mot de Passe  <span style="color: red">(*)</span> :
+    <input type="password"
+           name="postLink" [(ngModel)]="password" required>
+  </label>
+  <input [disabled]="!form.checkValidity()" type="submit" value="Enregistrer">
+</form>

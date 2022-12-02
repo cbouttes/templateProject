@@ -16,6 +16,7 @@ import { FormGroupComponent } from './components/form-group/form-group.component
 import { EditorComponent } from './pages/editor/editor.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PostHttpComponent } from './components/post-http/post-http.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PostHttpComponent } from './components/post-http/post-http.component';
     FormControlComponent,
     FormGroupComponent,
     EditorComponent,
-    PostHttpComponent
+    PostHttpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

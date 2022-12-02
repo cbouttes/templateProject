@@ -6,6 +6,7 @@ import {FormulaireComponent} from "./components/formulaire/formulaire.component"
 import {FormControlComponent} from "./components/form-control/form-control.component";
 import {FormGroupComponent} from "./components/form-group/form-group.component";
 import {PostHttpComponent} from "./components/post-http/post-http.component";
+import {LoginComponent} from "./pages/login/login.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
       {path: ':id', component: FormulaireComponent}
     ]},
   {path: 'json-server', component: PostHttpComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', component: HomeComponent} // Toujours en dernier (404)
 ];
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthServiceService} from "../../services/auth-service.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -37,12 +38,15 @@ export class SidebarComponent implements OnInit {
 
   minipost3 : MiniPostDefaut = new MiniPostDefaut();
 
+  currentUserName = ''
 
-  constructor() { }
+  constructor(private service: AuthServiceService) { }
 
   ngOnInit(): void {
+    this.service.currentUserName.subscribe({
+      next: userNameSubject => this.currentUserName = userNameSubject
+    })
   }
-
 
   onClick() {
     alert("click");
@@ -56,6 +60,11 @@ export class SidebarComponent implements OnInit {
   onChange() {
     alert(this.texte)
   }
+
+  logout(){
+    this.service.logout()
+  }
+
 }
 
 
