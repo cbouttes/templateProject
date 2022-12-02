@@ -1,10 +1,15 @@
 <p>form-control works!</p>
 <hr>
-FormControl <span style="color: red">(*)</span>
-<label>
-  <input [class.invalid]="formControlTitre.invalid && formControlTitre.touched" type="text" name="titre" [formControl]="formControlTitre">
+FormControl <span style="color: red">(*)</span> :
+<label>Titre
+  <input [class.invalid]="formControlTitre.invalid
+  && formControlTitre.touched" type="text"
+         name="titre" [formControl]="formControlTitre">
   <p *ngIf="formControlTitre.invalid
   && formControlTitre.touched">FormControl invalide</p>
 </label>
 <p> Titre : {{formControlTitre.value}}</p>
+<!-- Passage du paramètre titre dans l'url -->
 <p> Contrôle valide : {{formControlTitre.valid && formControlTitre.touched}}</p>
+<button [routerLink]="'/editor/reactive-form/'+formControlTitre.value"
+        [disabled]="formControlTitre.untouched || formControlTitre.invalid" >Reactive Form</button>

@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: 'editor', component: EditorComponent, children: [
       {path:'', component: FormulaireComponent},
       {path:'form-control',component: FormControlComponent},
-      {path:'reactive-form',component: FormGroupComponent}
+      {path:'reactive-form',component: FormGroupComponent},
+      {path:'reactive-form/:titre',component: FormGroupComponent}
     ]},
   {path: '**', component: HomeComponent} //Toujours en dernier (404)
 ];
