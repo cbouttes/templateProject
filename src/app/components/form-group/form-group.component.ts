@@ -30,6 +30,21 @@ export class FormGroupComponent implements OnInit {
       // Je met a jour la valeur du formControl 'titre'
       this.formGroup.controls['titre'].setValue(titreActuel)
     }
+
+    // Pour recupérer une valeur amenée a changer en dehors du composant
+    let titreVariable = ''
+    this.route.paramMap.subscribe({
+      next: (paramMap) => {
+        titreVariable = paramMap.get('titre') || ''
+      },
+      // Il est important de verifier les erreurs, car après déclenchement, l'observable est inopérant
+      error: (err) => console.log(err), // On s'assure de toujours avoir une trace en cas d'erreur
+      complete: () => console.log('End of Observable') // Information sur la fin des notifications
+    })
+
+
+    // Dans le cas ou je passe une fonction au lieu d'un objet, je ne traitre que le cas du 'next'
+    this.route.paramMap.subscribe((paramMap) => titreVariable = paramMap.get('titre') || '')
   }
 
   onSubmit() {

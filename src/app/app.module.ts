@@ -14,6 +14,8 @@ import { FormulaireComponent } from './components/formulaire/formulaire.componen
 import { FormControlComponent } from './components/form-control/form-control.component';
 import { FormGroupComponent } from './components/form-group/form-group.component';
 import { EditorComponent } from './pages/editor/editor.component';
+import {HttpClientModule} from "@angular/common/http";
+import { PostHttpComponent } from './components/post-http/post-http.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { EditorComponent } from './pages/editor/editor.component';
     FormulaireComponent,
     FormControlComponent,
     FormGroupComponent,
-    EditorComponent
+    EditorComponent,
+    PostHttpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@ import {EditorComponent} from "./pages/editor/editor.component";
 import {FormulaireComponent} from "./components/formulaire/formulaire.component";
 import {FormControlComponent} from "./components/form-control/form-control.component";
 import {FormGroupComponent} from "./components/form-group/form-group.component";
+import {PostHttpComponent} from "./components/post-http/post-http.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
       {path: 'reactive-form', component: FormGroupComponent},
       {path: 'reactive-form/:titre', component: FormGroupComponent}
     ]},
+  {path: 'json-server', component: PostHttpComponent},
   {path: '**', component: HomeComponent} // Toujours en dernier (404)
 ];
 

@@ -1,0 +1,20 @@
+<p>post-http works!</p>
+<!-- Section Post-->
+<section>
+  <header class="major">
+    <h2>Posts - JsonServer</h2>
+  </header>
+  <div class="posts">
+    <ng-container *ngFor="let post of posts">
+      <article *ngIf="post.imageSrc">
+        <a [href]="post.postLink" class="image"><img [src]="'assets/images/'+post.imageSrc" [alt]="post.imageAlt" /></a>
+        <h3>{{post.titre}}</h3>
+        <p>{{post.description}}</p>
+        <ul class="actions">
+          <li><a href="#" class="button">More</a></li>
+        </ul>
+      </article>
+    </ng-container>
+  </div>
+</section>
+

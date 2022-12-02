@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "description": "Ma description du Post",
+      "imageAlt": "",
+      "imageSrc": "pic01.jpg",
+      "postLink": "Mon lien image",
+      "titre": "Mon nouveau POST"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
